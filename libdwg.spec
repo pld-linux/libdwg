@@ -1,3 +1,4 @@
+# NOTE: see also http://www.gnu.org/software/libredwg/ (GNU fork under development, no releases yet)
 Summary:	LibDWG - free implementation of the DWG file format
 Summary(pl.UTF-8):	LibDWG - wolnodostępna implementacja formatu plików DWG
 Name:		libdwg
