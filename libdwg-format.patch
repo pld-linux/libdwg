@@ -1,0 +1,73 @@
+--- libdwg-0.6/src/logging.c.orig	2013-10-02 18:15:41.000000000 +0200
++++ libdwg-0.6/src/logging.c	2014-06-13 22:47:26.276313486 +0200
+@@ -64,7 +64,7 @@
+   if (log_level >= LOG_LEVEL_WARN)
+     {
+       LOG_HANDLER (LOG_OUTPUT, "libdwg: [WARN] ");
+-      LOG_HANDLER (LOG_OUTPUT, string);
++      LOG_HANDLER (LOG_OUTPUT, "%s", string);
+     }
+ }
+ 
+@@ -75,7 +75,7 @@
+   if (log_level >= LOG_LEVEL_ERROR)
+     {
+       LOG_HANDLER (LOG_OUTPUT, "libdwg: [ERROR] ");
+-      LOG_HANDLER (LOG_OUTPUT, string);
++      LOG_HANDLER (LOG_OUTPUT, "%s", string);
+     }
+ }
+ 
+@@ -85,7 +85,7 @@
+   if (log_level >= LOG_LEVEL_INFO)
+     {
+       LOG_HANDLER (LOG_OUTPUT, "libdwg: ");
+-      LOG_HANDLER (LOG_OUTPUT, string);
++      LOG_HANDLER (LOG_OUTPUT, "%s", string);
+     }
+ }
+ 
+@@ -93,14 +93,14 @@
+ LOG_TRACE (char *string)
+ {
+   if (log_level >= LOG_LEVEL_TRACE)
+-    LOG_HANDLER (LOG_OUTPUT, string);
++    LOG_HANDLER (LOG_OUTPUT, "%s", string);
+ }
+ 
+ void
+ LOG_COMPRESS (char *string)
+ {
+   if (log_level >= LOG_LEVEL_COMPRESS)
+-    LOG_HANDLER (LOG_OUTPUT, string);
++    LOG_HANDLER (LOG_OUTPUT, "%s", string);
+ }
+ 
+ void
+@@ -109,7 +109,7 @@
+   if (log_level >= LOG_LEVEL_MEMORY)
+     {
+       LOG_HANDLER (LOG_OUTPUT, "libdwg: [MEMORY] ");
+-      LOG_HANDLER (LOG_OUTPUT, string);
++      LOG_HANDLER (LOG_OUTPUT, "%s", string);
+     }
+ }
+ 
+@@ -118,7 +118,7 @@
+ {
+   if (log_level >= LOG_LEVEL_PLOT)
+     {
+-      LOG_HANDLER (LOG_OUTPUT, string);
++      LOG_HANDLER (LOG_OUTPUT, "%s", string);
+     }
+ }
+ 
+@@ -126,7 +126,7 @@
+ LOG_INSANE (char *string)
+ {
+   if (log_level >= LOG_LEVEL_INSANE)
+-    LOG_HANDLER (LOG_OUTPUT, string);
++    LOG_HANDLER (LOG_OUTPUT, "%s", string);
+ }
+ 
+ #else /* No logging: */
