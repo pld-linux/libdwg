@@ -1,0 +1,15 @@
+--- libdwg-0.6/src/dwg_object.spe.c.orig	2013-08-06 20:45:32.000000000 +0200
++++ libdwg-0.6/src/dwg_object.spe.c	2026-03-09 17:35:00.000000000 +0100
+@@ -1466,7 +1466,11 @@
+           stderr,
+           "Strange: dictionary with more than 10 thousand entries! Handle: %lu\n",
+           obj->handle.value);
+-      return;
++#ifdef IS_PRINT
++      return;
++#else
++      return (0);
++#endif
+     }
+ 
+   FIELD_TV_VECTOR(text, numitems);

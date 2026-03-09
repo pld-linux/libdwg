@@ -1,0 +1,21 @@
+--- libdwg-0.6/programs/dwg-dxf.c.orig	2013-08-06 20:45:32.000000000 +0200
++++ libdwg-0.6/programs/dwg-dxf.c	2026-03-09 17:36:00.000000000 +0100
+@@ -24,6 +24,7 @@
+ #include <stdint.h>
+ #include <string.h>
+ #include <math.h>
++#include <ctype.h>
+ #include "config.h"
+ 
+ #include "dwg.h"
+--- libdwg-0.6/programs/dump_objects.in.c.orig	2013-08-06 20:45:32.000000000 +0200
++++ libdwg-0.6/programs/dump_objects.in.c	2026-03-09 17:36:00.000000000 +0100
+@@ -191,6 +191,8 @@
+ #define DWG_NONGRAPH_END }
+ 
+ int dump_retzero() {return (0);}
++int dump_entity_handle (Bit_Chain * dat, Dwg_Object * obj);
++
+ 
+ #define IS_PRINT
+ #include "dwg_object.spe.c"

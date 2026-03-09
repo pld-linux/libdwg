@@ -1,0 +1,11 @@
+--- libdwg-0.6/src/dwg_object_free.in.c.orig	2013-08-06 20:45:32.000000000 +0200
++++ libdwg-0.6/src/dwg_object_free.in.c	2026-03-09 17:18:00.000000000 +0100
+@@ -78,7 +78,7 @@
+ 
+ #define HANDLE_VECTOR(name, sizefield, code) FIELD_TV(name)
+ 
+-#define FIELD_XDATA(name, size) return;
++#define FIELD_XDATA(name, size) return (0);
+ 
+ #define REACTORS(code) \
+   if (obj->reactors)\

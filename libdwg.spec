@@ -3,13 +3,18 @@ Summary:	LibDWG - free implementation of the DWG file format
 Summary(pl.UTF-8):	LibDWG - wolnodostępna implementacja formatu plików DWG
 Name:		libdwg
 Version:	0.6
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/libdwg/%{name}-%{version}.tar.bz2
+Source0:	https://downloads.sourceforge.net/libdwg/%{name}-%{version}.tar.bz2
 # Source0-md5:	5801b61de890fd020c3bedfb86870eeb
 Patch0:		%{name}-format.patch
-URL:		http://libdwg.sourceforge.net/
+Patch1:		decode-entity-handles-prototype.patch
+Patch2:		xdata-free-return-value.patch
+Patch3:		dictionary-return-value.patch
+Patch4:		missing-prototypes-includes.patch
+Patch5:		programs-missing-includes-and-prototype.patch
+URL:		https://libdwg.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -51,6 +56,11 @@ Statyczna biblioteka LibDWG.
 %prep
 %setup -q
 %patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
+%patch -P3 -p1
+%patch -P4 -p1
+%patch -P5 -p1
 
 %build
 %configure

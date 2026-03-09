@@ -1,0 +1,11 @@
+--- libdwg-0.6/src/decode.h.orig	2013-08-06 20:45:32.000000000 +0200
++++ libdwg-0.6/src/decode.h	2026-03-09 17:10:00.000000000 +0100
+@@ -111,6 +111,8 @@
+ 
+ int dwg_decode_entity (Bit_Chain *dat, Dwg_Object_Entity * ent);
+ 
++int dwg_decode_entity_handles (Bit_Chain *dat, Dwg_Object *obj);
++
+ int dwg_decode_nongraph (Bit_Chain *dat, Dwg_Object_Nongraph * ngr);
+ 
+ void dwg_decode_common_entity_handle_data (Bit_Chain *dat, Dwg_Object *obj);

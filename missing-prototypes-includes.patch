@@ -1,0 +1,30 @@
+--- libdwg-0.6/src/decode_r2000.c.orig	2013-08-06 20:45:32.000000000 +0200
++++ libdwg-0.6/src/decode_r2000.c	2026-03-09 17:28:00.000000000 +0100
+@@ -30,6 +30,7 @@
+ #include "decode.h"
+ #include "decode_r2000.h"
+ #include "variables.h"
++#include "object.h"
+ #include "logging.h"
+ 
+ extern Dwg_Header_Section header;
+--- libdwg-0.6/src/decode_r2004.c.orig	2013-08-06 20:45:32.000000000 +0200
++++ libdwg-0.6/src/decode_r2004.c	2026-03-09 17:28:00.000000000 +0100
+@@ -32,6 +32,7 @@
+ #include "decode.h"
+ #include "decode_r2004.h"
+ #include "variables.h"
++#include "object.h"
+ #include "logging.h"
+ 
+ extern Dwg_Header_Section header;
+--- libdwg-0.6/src/dwg.c.orig	2013-08-06 20:45:32.000000000 +0200
++++ libdwg-0.6/src/dwg.c	2026-03-09 17:28:00.000000000 +0100
+@@ -32,6 +32,7 @@
+ #include "bits.h"
+ #include "decode.h"
+ #include "object.h"
++#include "variables.h"
+ #include "logging.h"
+ 
+ /** DWG version codes */
